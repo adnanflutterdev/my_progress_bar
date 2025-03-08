@@ -1,0 +1,27 @@
+# Ignore test files (optional, if you don’t want to publish them)
+
+
+# Ignore build outputs and generated files
+build/
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+.pubspec.lock
+
+# Ignore IDE/editor files
+.idea/
+.vscode/
+*.iml
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore screenshots, media, or assets not needed in the package
+assets/Screenshot_*.jpg
+*.png
+*.ico
+
+# Ignore hidden files
+.*
