@@ -61,4 +61,4 @@ VerticalProgressBar(
 )
 ```
 
-#### 
+> #### ***More customized progress bar and loaders coming.***

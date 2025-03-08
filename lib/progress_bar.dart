@@ -1,5 +1,25 @@
 import 'package:flutter/material.dart';
 
+/// The class [HorizontalProgressBar] is used to create a horizontal progress bar.
+/// The required parameters of the [HorizontalProgressBar] are [maxValue], [currentPosition] and [onChanged]
+/// 
+/// Use of [HorizontalProgressBar]
+/// 
+/// example:
+/// ```dart
+///  HorizontalProgressBar(
+///    maxValue: 10,
+///  // [currentPosition] should be declared before its uses
+///    currentPosition: currentPosition,
+///    onChanged: (val) {
+///        setState(() {
+///            currentPosition = val;
+///        });
+///    },
+///)
+/// ```
+/// 
+
 class HorizontalProgressBar extends StatelessWidget {
   const HorizontalProgressBar(
       {super.key,
@@ -17,7 +37,7 @@ class HorizontalProgressBar extends StatelessWidget {
       this.trackHeight = 10,
       this.enabledHeight = 10});
 
-  /// [maxValue] Represents the maximum value the progressbar can have.
+  /// [maxValue] represents the maximum value of the progress bar, the value ranges from 0 to [maxValue].
   final double maxValue;
 
   /// [currentPosition] Represents the progressbar's current position.
@@ -158,14 +178,34 @@ class HorizontalProgressBar extends StatelessWidget {
 }
 
 
+/// The class [VerticalProgressBar] is used to create a vertical progress bar.
+/// The required parameters of the [VerticalProgressBar] are [height], [maxValue], [currentPosition] and [onChanged]
+/// 
+/// Use of [VerticalProgressBar]
+/// 
+/// example:
+/// ```dart
+///VerticalProgressBar(
+///    height: 200,
+///    maxValue: 10,
+///  // [currentPosition] should be declared before its uses
+///    currentPosition: currentPosition,
+///    onChanged: (val) {
+///        setState(() {
+///            currentPosition = val;
+///        });
+///    },
+///)
+/// ```
+/// 
 
 class VerticalProgressBar extends StatelessWidget {
   const VerticalProgressBar(
       {super.key,
+      required this.height,
       required this.maxValue,
       required this.currentPosition,
       required this.onChanged,
-      required this.height,
       this.bufferedPosition,
       this.onChangeStart,
       this.onChangeEnd,
@@ -176,11 +216,11 @@ class VerticalProgressBar extends StatelessWidget {
       this.trackWidth = 10,
       this.enabledWidth = 10});
 
-  /// [maxValue] Represents the maximum value the progressbar can have.
-  final double maxValue;
-
   /// [height] sets the height of the progress bar
   final double height;
+
+  /// [maxValue] Represents the maximum value the progressbar can have.
+  final double maxValue;
 
   /// [currentPosition] Represents the progressbar's current position.
   final double currentPosition;
