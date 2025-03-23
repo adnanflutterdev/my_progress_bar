@@ -1,3 +1,6 @@
+## 2.0.1
+* Update `Readme.md` file
+
 ## 2.0.0
 * Updated `Readme.md` file
 * Added loaders
