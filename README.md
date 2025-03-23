@@ -21,13 +21,12 @@ Visit Github repository of [my_progress_bar](https://github.com/adnanflutterdev/
 ## Progress bars and Loaders preview
 
 
-
-![Progress Bars Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/progress_bar.png?raw=true)
-![Loaders Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/loaders.png?raw=true)
+<img src='https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/progress_bar.png?raw=true' height='400'></img>
+<img src='https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/loaders.png?raw=true' height='400' ></img>
 
 
 ## Working example
-![Progress Bar Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/working_example.gif?raw=true)
+<img src='https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/working_example.gif?raw=true' height='400'></img>
 
 ## Getting started
 
