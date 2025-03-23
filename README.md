@@ -12,8 +12,9 @@ MyProgressBar is easy to customize. This package contains two types of progress 
 ## Progress bars preview
 
 
-[Screenshot](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/Screenshot_20250308-114739.jpg?raw=true).
-<center><img src="https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/Screenshot_20250308-114739.jpg?raw=true" height="400"></center>
+
+https://raw.githubusercontent.com/adnanflutterdev/my_progress_bar/main/assets/Screenshot_20250308-114739.jpg
+
 
 ## Getting started
 

@@ -1,3 +1,8 @@
+## 2.0.0
+* Updated `Readme.md` file
+* Added loaders
+* Added a new optinal parameter `isThumbVisible` in both HorizontalProgressBar and VerticalProgressBar
+
 ## 1.0.2
 * Updated `Readme.md` file
 

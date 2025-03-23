@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 /// The class [HorizontalProgressBar] is used to create a horizontal progress bar.
 /// The required parameters of the [HorizontalProgressBar] are [maxValue], [currentPosition] and [onChanged]
-/// 
+///
 /// Use of [HorizontalProgressBar]
-/// 
+///
 /// example:
 /// ```dart
 ///  HorizontalProgressBar(
@@ -18,7 +18,7 @@ import 'package:flutter/material.dart';
 ///    },
 ///)
 /// ```
-/// 
+///
 
 class HorizontalProgressBar extends StatelessWidget {
   const HorizontalProgressBar(
@@ -35,7 +35,8 @@ class HorizontalProgressBar extends StatelessWidget {
       this.thumbColor = const Color.fromRGBO(13, 71, 161, 1),
       this.thumbDiameter = 15,
       this.trackHeight = 10,
-      this.enabledHeight = 10});
+      this.enabledHeight = 10,
+      this.isThumbVisible = true});
 
   /// [maxValue] represents the maximum value of the progress bar, the value ranges from 0 to [maxValue].
   final double maxValue;
@@ -54,29 +55,32 @@ class HorizontalProgressBar extends StatelessWidget {
   /// It only called when the progressbar is dragged.
   final ValueChanged<double>? onChangeEnd;
 
-  /// [bufferedPosition] Represents the buffered value.
+  /// [bufferedPosition] sets the buffer position.
   final double? bufferedPosition;
 
-  /// [bufferedColor] Buffered area color.
+  /// [bufferedColor] sets buffered area color.
   final Color bufferedColor;
 
   /// [progressColor] Progress area color.
   final Color progressColor;
 
-  /// [thumbColor] Thumb color.
+  /// [thumbColor] sets the color of the thumb.
   final Color thumbColor;
 
-  /// [thumbDiameter] The diameter of the thumb.
+  /// [thumbDiameter] the diameter of the thumb.
   final double thumbDiameter;
 
-  /// [trackHeight] Height of the progress and buffered track
+  /// [trackHeight] height of the progress and buffered track.
   final double trackHeight;
 
-  /// [width] sets the width of the progress bar
+  /// [width] sets the width of the progress bar.
   final double? width;
 
-  /// [enabledHeight] refers the height of the gesture detector which can be used for dragging
+  /// [enabledHeight] sets the height of the progressbar.
   final double enabledHeight;
+
+  /// [isThumbVisible] sets whether the thumb is visible or not.
+  final bool isThumbVisible;
 
   @override
   Widget build(BuildContext context) {
@@ -157,18 +161,19 @@ class HorizontalProgressBar extends StatelessWidget {
                       borderRadius: BorderRadius.circular(trackHeight / 2)),
                 ),
               ),
-              Positioned(
-                top: enabledHeight / 2,
-                left: currentPosition * partition - thumbDiameter / 2,
-                child: Container(
-                  width: thumbDiameter,
-                  height: thumbDiameter,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: thumbColor,
+              if (isThumbVisible)
+                Positioned(
+                  top: enabledHeight / 2,
+                  left: currentPosition * partition - thumbDiameter / 2,
+                  child: Container(
+                    width: thumbDiameter,
+                    height: thumbDiameter,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: thumbColor,
+                    ),
                   ),
                 ),
-              ),
             ],
           ),
         ),
@@ -177,12 +182,11 @@ class HorizontalProgressBar extends StatelessWidget {
   }
 }
 
-
 /// The class [VerticalProgressBar] is used to create a vertical progress bar.
 /// The required parameters of the [VerticalProgressBar] are [height], [maxValue], [currentPosition] and [onChanged]
-/// 
+///
 /// Use of [VerticalProgressBar]
-/// 
+///
 /// example:
 /// ```dart
 ///VerticalProgressBar(
@@ -197,24 +201,26 @@ class HorizontalProgressBar extends StatelessWidget {
 ///    },
 ///)
 /// ```
-/// 
+///
 
 class VerticalProgressBar extends StatelessWidget {
-  const VerticalProgressBar(
-      {super.key,
-      required this.height,
-      required this.maxValue,
-      required this.currentPosition,
-      required this.onChanged,
-      this.bufferedPosition,
-      this.onChangeStart,
-      this.onChangeEnd,
-      this.bufferedColor = Colors.grey,
-      this.progressColor = Colors.blue,
-      this.thumbColor = const Color.fromRGBO(13, 71, 161, 1),
-      this.thumbDiameter = 18,
-      this.trackWidth = 10,
-      this.enabledWidth = 10});
+  const VerticalProgressBar({
+    super.key,
+    required this.height,
+    required this.maxValue,
+    required this.currentPosition,
+    required this.onChanged,
+    this.bufferedPosition,
+    this.onChangeStart,
+    this.onChangeEnd,
+    this.bufferedColor = Colors.grey,
+    this.progressColor = Colors.blue,
+    this.thumbColor = const Color.fromRGBO(13, 71, 161, 1),
+    this.thumbDiameter = 18,
+    this.trackWidth = 10,
+    this.enabledWidth = 10,
+    this.isThumbVisible = true,
+  });
 
   /// [height] sets the height of the progress bar
   final double height;
@@ -256,6 +262,9 @@ class VerticalProgressBar extends StatelessWidget {
 
   /// [enabledWidth] refers the width of the gesture detector which can be used for dragging
   final double enabledWidth;
+
+  /// [isThumbVisible] sets whether the thumb is visible or not.
+  final bool isThumbVisible;
 
   @override
   Widget build(BuildContext context) {
@@ -325,7 +334,6 @@ class VerticalProgressBar extends StatelessWidget {
                   ),
                 ),
               Positioned(
-                // top: maxLength - (currentPosition * partition),
                 bottom: 0,
                 left: left,
                 child: Container(
@@ -336,6 +344,7 @@ class VerticalProgressBar extends StatelessWidget {
                       borderRadius: BorderRadius.circular(trackWidth / 2)),
                 ),
               ),
+              if(isThumbVisible)
               Positioned(
                 left: enabledWidth / 2,
                 bottom: (currentPosition * partition) - thumbDiameter / 2,
