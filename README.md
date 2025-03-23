@@ -9,13 +9,16 @@ MyProgressBar is easy to customize. This package contains two types of progress 
 > Visit Github repository of [my_progress_bar](https://github.com/adnanflutterdev/my_progress_bar.git) for more information.
 
 
-## Progress bars preview
+## Progress bars and Loaders preview
 
 
 
-https://raw.githubusercontent.com/adnanflutterdev/my_progress_bar/main/assets/Screenshot_20250308-114739.jpg
+![Progress Bar Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/progress_bar.png?raw=true)
+![Progress Bar Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/loader.png?raw=true)
 
 
+## Working example
+![Progress Bar Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/Screen_recording_20250323_173755.mp4)
 ## Getting started
 
 ```
