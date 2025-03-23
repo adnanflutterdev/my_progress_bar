@@ -1,20 +1,29 @@
 # my_progress_bar
 
-This is the package which can be use to create progress bars.
+This is the package which can be use to create progress bars and loaders.
 This progress bar is effective than Slider provided by the flutter itself.
-MyProgressBar is easy to customize. This package contains two types of progress bar.
+MyProgressBar is easy to customize. This package curently contains two types of progress bar and four types of loaders.
+
+Progress bars types
 * HorizontalProgressBar()
 * VerticalProgressBar() 
 
-> Visit Github repository of [my_progress_bar](https://github.com/adnanflutterdev/my_progress_bar.git) for more information.
+Loaders type
+* DottedLoader(),
+* ExpandingBoxLoader(),
+* JumpingCirclesLoader(),
+* RotatingCirclesLoader(),
+
+
+Visit Github repository of [my_progress_bar](https://github.com/adnanflutterdev/my_progress_bar.git) for more information.
 
 
 ## Progress bars and Loaders preview
 
 
 
-![Progress Bar Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/progress_bar.png?raw=true)
-![Progress Bar Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/loader.png?raw=true)
+![Progress Bars Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/progress_bar.png?raw=true)
+![Loaders Preview](https://github.com/adnanflutterdev/my_progress_bar/blob/main/assets/loaders.png?raw=true)
 
 
 ## Working example
@@ -30,7 +39,7 @@ or
 ```
 flutter pub get my_progress_bar
 ```
-## Usage
+## Usage for progress bars
 
 Import the following in the your project file.
 
@@ -66,4 +75,23 @@ VerticalProgressBar(
 )
 ```
 
-> #### ***More customized progress bar and loaders coming.***
+## Usage for loaders
+
+Import the following in the your project file.
+```
+import 'package:my_progress_bar/loaders.dart';
+```
+
+```dart 
+    // for dotted loader
+    DottedLoader(),
+    // for expanding boxes loader
+    ExpandingBoxLoader(),
+    // for jumping circles loader
+    JumpingCirclesLoader(),
+    // for rotating circles loader
+    RotatingCirclesLoader(),
+```
+
+All the parameters for the loaders are optional but you can play with parameters for customization of the loaders.
+

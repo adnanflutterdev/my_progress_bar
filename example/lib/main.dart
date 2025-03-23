@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_progress_bar/loaders.dart';
 import 'package:my_progress_bar/progress_bar.dart';
-// import 'package:my_progress_bar/progress_bar.dart';
 
 void main() {
   runApp(const MyApp());
