@@ -7,19 +7,18 @@ import 'dart:math';
 /// ``` dart
 /// RotatingCirclesLoader()
 /// ```
-/// 
+///
 /// Also you sets the following parameters to customize the loader
-/// 
+///
 /// [ballsCount] -> sets the number of rotating balls.
-/// 
+///
 /// [loaderRadius] -> sets the radius of the loader.
-/// 
+///
 /// [ballRadius] -> sets the radius to the rotating balls.
-/// 
+///
 /// [ballsColor] -> sets the color of the balls.
 class RotatingCirclesLoader extends StatefulWidget {
-
-/// Creates a rotating circles loader.
+  /// Creates a rotating circles loader.
   const RotatingCirclesLoader({
     super.key,
     this.ballsCount = 6,
@@ -27,12 +26,16 @@ class RotatingCirclesLoader extends StatefulWidget {
     this.ballRadius = 5,
     this.ballsColor = Colors.white,
   });
+
   /// The radius of each ball in the loader.
   final double ballRadius;
+
   /// The radius of the entire loader circle.
   final double loaderRadius;
+
   /// The number of balls in the loader.
   final int ballsCount;
+
   /// The color of the balls.
   final Color ballsColor;
 
@@ -50,8 +53,8 @@ class _RotatingCirclesLoaderState extends State<RotatingCirclesLoader>
     super.initState();
     _controller = AnimationController(
         vsync: this, duration: Duration(milliseconds: 2000));
-    _animation = Tween<double>(begin: 0, end: 2 * pi).animate(
-        CurvedAnimation(parent: _controller, curve: Curves.easeIn));
+    _animation = Tween<double>(begin: 0, end: 2 * pi)
+        .animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
     _controller.repeat();
   }
 
@@ -98,23 +101,22 @@ class _RotatingCirclesLoaderState extends State<RotatingCirclesLoader>
   }
 }
 
-
 /// A loader that displays a row of dots that are filled sequentially.
 /// Usage example
 /// ``` dart
 /// DottedLoader()
 /// ```
-/// 
+///
 /// Also you sets the following parameters to customize the loader
-/// 
+///
 /// [ballsCount] -> sets the number of rotating balls.
-/// 
+///
 /// [loaderWidth] -> sets the width of the loader.
-/// 
+///
 /// [ballRadius] -> sets the radius to the rotating balls.
-/// 
+///
 /// [ballsColor] -> sets the color of the balls.
-/// 
+///
 /// [ballsFillColor] -> sets the color of the progress balls.
 class DottedLoader extends StatefulWidget {
   const DottedLoader(
@@ -125,7 +127,7 @@ class DottedLoader extends StatefulWidget {
       this.ballsColor = Colors.white,
       this.ballsFillColor = Colors.black});
 
-   /// The radius of each ball in the loader.
+  /// The radius of each ball in the loader.
   final double ballRadius;
 
   /// The width of the entire loader.
@@ -193,21 +195,19 @@ class _DottedLoaderState extends State<DottedLoader>
   }
 }
 
-
-
 /// A loader that displays three jumping or waving circles.
 ///
 /// Usage example
 /// ``` dart
 /// JumpingCirclesLoader()
 /// ```
-/// 
+///
 /// Also you sets the following parameters to customize the loader
-/// 
+///
 /// [ballRadius] -> sets the radius to the rotating balls.
-/// 
+///
 /// [ballsColor] -> sets the color of the balls.
-/// 
+///
 /// [jumpHeight] -> sets the maximum height the ball jumps to up and down
 class JumpingCirclesLoader extends StatefulWidget {
   /// Creates a jumping circles loader.
@@ -297,22 +297,21 @@ class _JumpingCirclesLoaderState extends State<JumpingCirclesLoader>
   }
 }
 
-
 /// A loader that displays three expanding boxes.
 ///
 /// Usage example
 /// ``` dart
 /// ExpandingBoxLoader()
 /// ```
-/// 
+///
 /// Also you sets the following parameters to customize the loader
-/// 
+///
 /// [boxWidth] -> sets the width to the boxes.
-/// 
+///
 /// [minHeight] -> sets the minimum height of the boxes.
-/// 
+///
 /// [maxHeight] -> sets the maximum height the boxes.
-/// 
+///
 /// [boxColor] -> sets the color of the boxes.
 class ExpandingBoxLoader extends StatefulWidget {
   const ExpandingBoxLoader({
@@ -363,6 +362,14 @@ class _ExpandingBoxLoaderState extends State<ExpandingBoxLoader>
         });
       });
     });
+  }
+
+  @override
+  void dispose() {
+    _box1.dispose();
+    _box2.dispose();
+    _box3.dispose();
+    super.dispose();
   }
 
   @override
