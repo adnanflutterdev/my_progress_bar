@@ -1,3 +1,6 @@
+## 2.0.2
+* Added dispose methods in  `ExpandingBoxLoader` class.
+
 ## 2.0.1
 * Update `Readme.md` file
 

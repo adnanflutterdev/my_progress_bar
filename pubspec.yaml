@@ -1,6 +1,6 @@
 name: my_progress_bar
 description: "A flutter package for displaying progress bars and loaders. The progress bar consists of Horizontal and vertical progress bar. The loaders contains RotatingCirclesLoader, DottedLoader, JumpingCirclesLoader and ExpandingBoxLoader."
-version: 2.0.1
+version: 2.0.2
 homepage: https://github.com/adnanflutterdev/my_progress_bar.git
 license: MIT
 
