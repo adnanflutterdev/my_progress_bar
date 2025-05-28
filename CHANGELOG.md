@@ -1,3 +1,6 @@
+## 2.0.3
+* Fixed runtime error on widget `JumpingCircleLoader`
+
 ## 2.0.2
 * Added dispose methods in  `ExpandingBoxLoader` class.
 
