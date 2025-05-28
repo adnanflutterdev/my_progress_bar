@@ -250,15 +250,21 @@ class _JumpingCirclesLoaderState extends State<JumpingCirclesLoader>
         AnimationController(vsync: this, duration: Duration(milliseconds: 600));
 
     _tween = Tween<double>(begin: 0.0, end: widget.jumpHeight);
-    Timer(Duration.zero, () {
-      _circle1.repeat(reverse: true);
-      Timer(Duration(milliseconds: 200), () {
-        _circle2.repeat(reverse: true);
-        Timer(Duration(milliseconds: 200), () {
-          _circle3.repeat(reverse: true);
-        });
-      });
-    });
+
+    _startAnimations();
+  }
+
+  Future<void> _startAnimations() async {
+    if (!mounted) return;
+    _circle1.repeat(reverse: true);
+
+    await Future.delayed(Duration(milliseconds: 200));
+    if (!mounted) return;
+    _circle2.repeat(reverse: true);
+
+    await Future.delayed(Duration(milliseconds: 200));
+    if (!mounted) return;
+    _circle3.repeat(reverse: true);
   }
 
   @override
