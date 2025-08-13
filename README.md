@@ -32,7 +32,7 @@ Visit Github repository of [my_progress_bar](https://github.com/adnanflutterdev/
 
 ```
 dependencies:
- my_progress_bar: ^2.1.0
+ my_progress_bar: ^1.0.2
 ```
 or
 ```
