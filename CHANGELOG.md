@@ -1,3 +1,7 @@
+## 2.1.0
+* Made progressbars animation shoother.
+* Now `HorizontalProgressBar` will adapt the available screen width.
+
 ## 2.0.3
 * Fixed runtime error on widget `JumpingCircleLoader`
 
